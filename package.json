@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs './**/*.{ts,tsx}'",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -41,6 +42,8 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-tailwindcss": "^3.17.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "postcss": "^8",
     "prettier": "^3.3.2",
     "prettier-plugin-organize-imports": "^3.2.4",
