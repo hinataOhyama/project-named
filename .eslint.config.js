@@ -4,7 +4,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import typeScriptESLint from "@typescript-eslint/eslint-plugin";
 import typeScriptESLintParser from "@typescript-eslint/parser";
 import eslintPluginTailwindCSS from "eslint-plugin-tailwindcss";
-import eslintConfigNext from "eslint-config-next";
+import eslintConfigNext, { parserOptions } from "eslint-config-next";
 
 export default [
   eslint.configs.recommended,
@@ -18,7 +18,10 @@ export default [
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: typeScriptESLintParser,
-      sourceType: "script",
+      parserOptions: {
+        sourceType: "module",
+        project: "./tsconfig.json",
+      },
     },
     rules: {
       "no-console": "off",
@@ -31,6 +34,20 @@ export default [
       "node/no-missing-import": "off",
       "react/no-unescaped-entities": "off",
       "@next/next/no-page-custom-font": "off",
+      "@typescript-eslint/strict-boolean-expressions": "error",
+      "no-implicit-coercion": "error",
+      "@typescript-eslint/restrict-plus-operands": [
+        "error",
+        {
+          checkCompoundAssignments: true,
+          allowBoolean: false,
+          allowNullish: false,
+          allowNumberAndString: false,
+          allowRegExp: false,
+          allowAny: false,
+        },
+      ],
+      "prefer-template": "error",
     },
   },
 ];
