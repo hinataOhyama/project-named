@@ -6,8 +6,9 @@
 2. 環境内の`project-name`をすべて置換（package-lock.json以外）
 3. `docker compose build`
 4. `docker compose up -d`
-5. localhost:3000を叩く
+5. localhost:3000を叩いて起動確認
 6. Remote development拡張機能を使い、コンテナ内で作業する
+7. `git commit -m "update project-named"`
 
 ## Finish project
 
