@@ -9,6 +9,11 @@
 5. localhost:3000を叩く
 6. Remote development拡張機能を使い、コンテナ内で作業する
 
+## Finish project
+
+1. `docker compose down --rmi local -v`
+2. `rm -r ./project-named`
+
 ## 主な使用ツール
 
 - VSCode
