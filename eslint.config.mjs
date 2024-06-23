@@ -37,6 +37,7 @@ export default [
       "next-env.d.ts",
       "*.cjs",
       "*.mjs",
+      ".storybook/"
     ],
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,

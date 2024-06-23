@@ -1,7 +1,7 @@
 const path = require("path");
 
 const buildEslintCommand = (filenames) =>
-  `ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs './**/*.{ts,tsx}' --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(" --file ")}`;
+  `eslint -c eslint.config.mjs --fix`;
 
 const buildPrettierCommand = (filenames) =>
   `prettier --write ${filenames.map((f) => path.relative(process.cwd(), f)).join(" ")}`;

@@ -3,12 +3,15 @@ services:
     build: .
     container_name: project-named
     tty: true
+    environment:
+      - WATCHPACK_POLLING=true
     ports:
       - "3000:3000"
+      - "6006:6006"
     volumes:
       - .:/usr/src
       - node_modules:/usr/src/node_modules
-    command: 'npm run dev'
+    command: sh -c "npm run dev"
 
 volumes:
   node_modules:
