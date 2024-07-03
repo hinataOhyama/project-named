@@ -1,4 +1,4 @@
-# React環境テンプレート
+# Next.js環境テンプレート
 
 ## Get Started
 
