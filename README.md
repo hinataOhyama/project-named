@@ -1,4 +1,4 @@
-# Next.js環境テンプレート
+# Next.js環境テンプレート(WIP)
 
 ## Get Started
 
